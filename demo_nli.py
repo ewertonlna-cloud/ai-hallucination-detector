@@ -53,6 +53,14 @@ CASOS_DE_TESTE = [
         "para toda a família do funcionário.",
         "neutral",
         "Fabricação: informação não presente na fonte",
+    ),(
+        "Funcionários têm direito a 30 dias de férias remuneradas por ano, "
+        "que podem ser divididos em até 3 períodos.",
+        "A política da empresa garante aos colaboradores 30 dias de descanso "
+        "remunerado a cada ano, podendo ser fracionados em até três vezes.",
+        "entailment",
+        "Paráfrase mantendo a quantidade exata (isola se o erro do caso 3 foi "
+        "a troca '30 dias' -> 'um mês')",
     ),
 ]
 
