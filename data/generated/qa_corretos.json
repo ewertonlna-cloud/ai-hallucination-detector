@@ -1,0 +1,37 @@
+[
+  {
+    "id": "q1",
+    "documento": "politica_ferias.md",
+    "secao": "Direito a férias",
+    "pergunta": "Quantos dias de férias um funcionário tem direito por ano?",
+    "resposta_correta": "Todo funcionário com contrato por tempo indeterminado tem direito a 30 dias de férias remuneradas a cada 12 meses trabalhados, conforme a CLT."
+  },
+  {
+    "id": "q2",
+    "documento": "politica_ferias.md",
+    "secao": "Fracionamento",
+    "pergunta": "Posso dividir minhas férias em períodos?",
+    "resposta_correta": "Sim, as férias podem ser divididas em até 3 períodos. Um deles não pode ter menos de 14 dias corridos, e os outros não podem ter menos de 5 dias corridos cada."
+  },
+  {
+    "id": "q3",
+    "documento": "politica_ferias.md",
+    "secao": "Solicitação",
+    "pergunta": "Com quanta antecedência preciso pedir as férias e quem aprova?",
+    "resposta_correta": "É preciso solicitar com no mínimo 30 dias de antecedência, pelo sistema interno de RH. O gestor direto tem até 5 dias úteis para aprovar ou sugerir outra data."
+  },
+  {
+    "id": "q4",
+    "documento": "politica_ferias.md",
+    "secao": "Pagamento",
+    "pergunta": "Quando as férias são pagas?",
+    "resposta_correta": "O pagamento, acrescido do terço constitucional, é feito até 2 dias antes do início do período de descanso."
+  },
+  {
+    "id": "q5",
+    "documento": "politica_ferias.md",
+    "secao": "Venda de férias (abono pecuniário)",
+    "pergunta": "Posso vender parte das minhas férias?",
+    "resposta_correta": "Sim, é possível vender até 1/3 do período de férias, o equivalente a dez dias, mediante solicitação formal feita com no mínimo 15 dias de antecedência do fim do período aquisitivo."
+  }
+]
