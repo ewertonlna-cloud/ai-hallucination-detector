@@ -1,0 +1,27 @@
+# Roda os testes automáticos a cada push na main e em cada pull request.
+# Só o pytest é instalado: os testes não usam o modelo de IA (ele é trocado por
+# uma versão falsa), então não precisa baixar torch nem transformers.
+name: Testes
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v7
+
+      - name: Instalar o Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Instalar o pytest
+        run: pip install pytest
+
+      - name: Rodar os testes
+        run: python -m pytest -v
