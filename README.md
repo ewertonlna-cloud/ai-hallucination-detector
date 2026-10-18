@@ -12,17 +12,22 @@ Modelos de linguagem escrevem frases fluentes mesmo quando não têm base para o
 
 ## Como funciona
 
-```mermaid
-flowchart TD
-    A["Resposta da IA + trecho-fonte"] --> B{"Camada 1: regras"}
-    B -- "problema encontrado" --> E["alucinada"]
-    B -- "nada encontrado" --> C{"Camada 2: NLI, frase a frase"}
-    C -- "contradição" --> E
-    C -- "frase não confirmada" --> F["incerta"]
-    C -- "tudo confirmado" --> G["fiel"]
-    E --> H["Bloqueada: usuário vê um aviso, revisão de prioridade alta"]
-    F --> I["Bloqueada: usuário vê um aviso, revisão de prioridade média"]
-    G --> J["Liberada: usuário vê a resposta"]
+```text
+Resposta da IA + trecho-fonte
+        |
+        v
+Camada 1: regras (números, siglas, negações)
+        |-- problema encontrado ------> ALUCINADA
+        |
+        v  (nada encontrado)
+Camada 2: NLI, frase a frase
+        |-- contradição --------------> ALUCINADA
+        |-- frase não confirmada -----> INCERTA
+        |-- tudo confirmado ----------> FIEL
+
+ALUCINADA -> bloqueada: o usuário vê um aviso; revisão de prioridade ALTA
+INCERTA   -> bloqueada: o usuário vê um aviso; revisão de prioridade MÉDIA
+FIEL      -> liberada:  o usuário vê a resposta
 ```
 
 | Camada | O que faz | Característica |
@@ -106,6 +111,7 @@ src/avaliar.py         mede o desempenho de cada camada
 run_pipeline.py        roda tudo com um comando
 demo_nli.py            prova de conceito do modelo NLI
 tests/                 testes automáticos (pytest)
+docs/                  imagens usadas neste README
 .github/workflows/     CI no GitHub Actions
 ```
 
